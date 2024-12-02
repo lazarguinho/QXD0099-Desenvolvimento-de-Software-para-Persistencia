@@ -2,8 +2,8 @@ import csv
 import os
 import hashlib
 from typing import List, Optional
-from models.Carta import Carta
-from utils.logging_config import logger
+from src.models.Carta import Carta
+from src.utils.logging_config import logger
 
 CSV_FILE_PATH = "data/cartas.csv"
 

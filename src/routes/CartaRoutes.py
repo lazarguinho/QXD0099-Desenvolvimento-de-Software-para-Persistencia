@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException
 from typing import Optional, List
-from models.Carta import Carta
-from services.CartaService import verificar_carta_existe, adicionar_carta, filtrar_cartas, calcular_hash_csv
-from utils.logging_config import logger
+from src.models.Carta import Carta
+from src.services.CartaService import verificar_carta_existe, adicionar_carta, filtrar_cartas, calcular_hash_csv
+from src.utils.logging_config import logger
 
 router = APIRouter()
 

@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routes.CartaRoutes import router as CartaRoutes
+from src.routes.CartaRoutes import router as CartaRoutes
 
 app = FastAPI()
 
