@@ -11,13 +11,7 @@ Bem-vindo ao repositório de projetos práticos da disciplina **QXD0099**, ofere
 
 ## Instalação
 
-### Passo 1: Instale as dependências
-Execute o comando abaixo para instalar todas as dependências necessárias:
-```bash
-pip install -r requirements.txt
-```
-
-### Passo 2: Ative o ambiente virtual
+### Ative o ambiente virtual
 
 #### Linux/macOS:
 ```bash
@@ -27,6 +21,12 @@ source venv/bin/activate
 #### Windows:
 ```bash
 venv\Scripts\activate
+```
+
+### A ambiente virtual já deve estar com as dependências instaladas. Caso precise instalar as dependências use o seguinte comando:
+Execute o comando abaixo para instalar todas as dependências necessárias:
+```bash
+pip install -r requirements.txt
 ```
 
 ## Execução
