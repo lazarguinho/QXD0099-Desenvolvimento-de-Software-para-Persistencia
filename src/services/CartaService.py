@@ -1,5 +1,6 @@
 import csv
 import os
+import hashlib
 from typing import List, Optional
 from models.Carta import Carta
 
@@ -47,3 +48,15 @@ def filtrar_cartas(tipo: Optional[str] = None, cor: Optional[str] = None, rarity
             cartas_filtradas.append(carta)
 
     return cartas_filtradas
+
+def calcular_hash_csv() -> str:
+    sha256_hash = hashlib.sha256()
+
+    try:
+        with open(CSV_FILE_PATH, "rb") as file:
+            for chunk in iter(lambda: file.read(4096), b""):
+                sha256_hash.update(chunk)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"O arquivo {CSV_FILE_PATH} não foi encontrado.")
+
+    return sha256_hash.hexdigest()

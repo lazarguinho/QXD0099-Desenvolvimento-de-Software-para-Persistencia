@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from typing import Optional, List
 from models.Carta import Carta
-from services.CartaService import verificar_carta_existe, adicionar_carta, filtrar_cartas
+from services.CartaService import verificar_carta_existe, adicionar_carta, filtrar_cartas, calcular_hash_csv
 
 router = APIRouter()
 
@@ -16,3 +16,11 @@ def criar_carta(carta: Carta):
 @router.get("/filtrar/", response_model=List[Carta])
 def listar_cartas_filtradas(tipo: Optional[str] = None, cor: Optional[str] = None, rarity: Optional[str] = None):
     return filtrar_cartas(tipo, cor, rarity)
+
+@router.get("/hash/")
+def calcular_hash():
+    try:
+        return {"hash": calcular_hash_csv()}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
