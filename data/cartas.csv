@@ -1,0 +1,10 @@
+id,nome,tipo,custo,cor,rarity,habilidade
+1,Animate Wall,Enchantment — Aura,1,Branco,Rare,Permite que paredes (Walls) possam atacar.
+2,Armageddon,Sorcery,4,Branco,Rare,Destrói todas as terras no campo de batalha.
+3,Balance,Sorcery,2,Branco,Rare,Faz com que cada jogador descarte cartas e sacrifique criaturas e terrenos até igualar o jogador com menos.
+4,Benalish Hero,Creature,1,Branco,Common,Pode ser designada para bloquear várias criaturas (Banding).
+5,Black Ward,Enchantment — Aura,1,Branco,Uncommon,Concede proteção contra preto à criatura encantada.
+6,Blaze of Glory,Instant,1,Branco,Rare,Permite que uma criatura bloqueie todas as criaturas atacantes.
+7,Blessing,Enchantment — Aura,2,Branco,Uncommon,Aumenta +1/+1 na criatura encantada enquanto você pagar mana branco.
+8,Blue Ward,Enchantment — Aura,1,Branco,Uncommon,Concede proteção contra azul à criatura encantada.
+9,Castle,Enchantment,4,Branco,Uncommon,Concede +0/+2 a todas as criaturas brancas enquanto estiver desvirado.
