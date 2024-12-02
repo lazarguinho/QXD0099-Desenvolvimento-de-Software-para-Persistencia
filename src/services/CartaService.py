@@ -3,10 +3,12 @@ import os
 import hashlib
 from typing import List, Optional
 from models.Carta import Carta
+from utils.logging_config import logger
 
 CSV_FILE_PATH = "data/cartas.csv"
 
 if not os.path.exists(CSV_FILE_PATH):
+    logger.warning(f"O arquivo {CSV_FILE_PATH} não foi encontrado. Criando um novo arquivo.")
     with open(CSV_FILE_PATH, mode="w", newline="") as file:
         writer = csv.writer(file)
         writer.writerow(["id", "nome", "tipo", "custo", "cor", "rarity", "habilidade"])
@@ -57,6 +59,7 @@ def calcular_hash_csv() -> str:
             for chunk in iter(lambda: file.read(4096), b""):
                 sha256_hash.update(chunk)
     except FileNotFoundError:
+        logger.warning(f"O arquivo {CSV_FILE_PATH} nao foi encontrado.")
         raise FileNotFoundError(f"O arquivo {CSV_FILE_PATH} não foi encontrado.")
 
     return sha256_hash.hexdigest()
