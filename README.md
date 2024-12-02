@@ -1,16 +1,30 @@
-# QXD0099-Desenvolvimento-de-Software-para-Persistencia
-Repositório com os projetos práticos propostos durante a disciplina QXD0099 oferecida pela Universidade Federal do Ceará, Campus Quixadá, e ministrada pelo Prof. Francisco Victor da Silva Pinheiro.
+# QXD0099 - Desenvolvimento de Software para Persistência
 
+Repositório com os projetos práticos propostos durante a disciplina **QXD0099** oferecida pela Universidade Federal do Ceará, Campus Quixadá, ministrada pelo Prof. Francisco Victor da Silva Pinheiro.
 
-Instale as dependências usando:
+## Instalação
+
+### Instale as dependências:
+```bash
 pip install -r requirements.txt
+```
 
-Ative o ambiente virtual:
-Linux/macOS:
+### Ative o ambiente virtual:
+
+#### Linux/macOS:
+```bash
 source venv/bin/activate
+```
 
-Windows:
+#### Windows:
+```bash
 venv\Scripts\activate
+```
 
-Execute a aplicação usando:
+## Execução
+
+### Execute a aplicação:
+```bash
 uvicorn src.main:app --reload
+```
+
