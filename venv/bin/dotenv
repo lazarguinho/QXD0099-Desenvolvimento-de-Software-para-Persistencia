@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' "/Users/mateuspedrosa/Documents/Outubro 2024/QXD0099-Desenvolvimento-de-Software-para-Persistencia/venv/bin/python3" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from dotenv.__main__ import cli
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(cli())
