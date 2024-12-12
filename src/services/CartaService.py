@@ -75,8 +75,8 @@ def ler_dados_csv():
 
 def escrever_dados_csv(cartas):
 	with open(CSV_FILE_PATH, mode='w', newline='') as file:
-		fieldnames = ['id','nome','preco','quantidade']
+		fieldnames = ["id","nome","tipo","custo","cor","rarity","habilidade"]
 		writer = csv.DictWriter(file, fieldnames=fieldnames)
 		writer.writeheader()
-		for produto in cartas:
-			writer.writerow(produto.dict())
+		for carta in cartas:
+			writer.writerow(carta.dict())
