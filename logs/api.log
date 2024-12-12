@@ -1,2 +1,5 @@
 2024-12-02 00:36:06,757 - INFO - Hash SHA256 do arquivo CSV calculado.
 2024-12-02 00:36:34,552 - INFO - Listando cartas filtradas: tipo=None, cor=None, rarity=Rare
+2024-12-12 11:13:38,519 - INFO - Carta inserida com sucesso: id=10, nome=luva D. pedreiro, tipo=estranho, custo=10, cor=branco, rarity=Rare, habilidade=receba: aqui é do Brasil
+2024-12-12 11:16:40,557 - INFO - Hash SHA256 do arquivo CSV calculado.
+2024-12-12 11:18:55,845 - INFO - Hash SHA256 do arquivo CSV calculado.

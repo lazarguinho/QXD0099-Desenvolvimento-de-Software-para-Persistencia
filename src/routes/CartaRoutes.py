@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from typing import Optional, List
 from src.models.Carta import Carta
-from src.services.CartaService import verificar_carta_existe, adicionar_carta, filtrar_cartas, calcular_hash_csv, ler_dados_csv
+from src.services.CartaService import verificar_carta_existe, adicionar_carta, filtrar_cartas, calcular_hash_csv, ler_dados_csv, escrever_dados_csv
 from src.utils.logging_config import logger
 
 router = APIRouter()
@@ -37,5 +37,29 @@ def calcular_hash():
 def listar_todas_cartas():
     return ler_dados_csv()
 
+@router.get("/{id}")
+def get_products_by_id(id: int):
+	products = ler_dados_csv()
+	for produto in products:
+		if produto.id == id:
+			return produto
+	raise HTTPException(status_code=404, detail='Carta não encontrada')
 
-    
+@router.put("/{carta_id}", response_model=Carta)
+def atualizar_carta(carta_id: int, carta_atualizada: Carta):
+    cartas = ler_dados_csv()
+    for i, carta in enumerate(cartas):
+        if carta.id == carta_id:
+            cartas[i] = carta_atualizada
+            escrever_dados_csv(cartas)
+            return carta_atualizada
+    raise HTTPException(status_code=404, detail="Carta não encontrada")
+
+@router.delete("/{carta_id}", response_model=dict)
+def deletar_carta(carta_id: int):
+    cartas = ler_dados_csv()
+    cartas_filtradas = [carta for carta in cartas if carta.id != carta_id]
+    if len(cartas) == len(cartas_filtradas):
+        raise HTTPException(status_code=404, detail="Carta não encontrada")
+    escrever_dados_csv(cartas_filtradas)
+    return {"mensagem": "Carta deletada com sucesso"}    
