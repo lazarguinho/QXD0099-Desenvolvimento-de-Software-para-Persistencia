@@ -8,3 +8,4 @@ id,nome,tipo,custo,cor,rarity,habilidade
 7,Blessing,Enchantment — Aura,2,Branco,Uncommon,Aumenta +1/+1 na criatura encantada enquanto você pagar mana branco.
 8,Blue Ward,Enchantment — Aura,1,Branco,Uncommon,Concede proteção contra azul à criatura encantada.
 9,Castle,Enchantment,4,Branco,Uncommon,Concede +0/+2 a todas as criaturas brancas enquanto estiver desvirado.
+11,string,string,0,string,string,string
