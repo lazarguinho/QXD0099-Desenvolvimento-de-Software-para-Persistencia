@@ -33,7 +33,7 @@ def calcular_hash():
         logger.error(f"Erro ao calcular o hash SHA256: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
-@router.get("/all", response_model=List[Carta])
+@router.get("/", response_model=List[Carta])
 def listar_todas_cartas():
     logger.info("Todas as cartas listadas")
     return ler_dados_csv()
@@ -70,4 +70,9 @@ def deletar_carta(carta_id: int):
     escrever_dados_csv(cartas_filtradas)
     
     logger.info(f"Carta: {carta_id} deletada com sucesso")
-    return {"mensagem": "Carta deletada com sucesso"}    
+    return {"mensagem": "Carta deletada com sucesso"}
+
+@router.get("/total/")
+def quantidae_de_entidades():
+	cartas = ler_dados_csv()
+	return {"quantidade": len(cartas)}

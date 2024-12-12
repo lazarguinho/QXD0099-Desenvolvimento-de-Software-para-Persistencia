@@ -10,3 +10,12 @@
 2024-12-12 14:13:22,497 - INFO - Carta inserida com sucesso: id=10, nome=carta de testes, tipo=Heroico, custo=10, cor=preto, rarity=lendario, habilidade=serve como elemento essencial de testes
 2024-12-12 14:13:40,115 - INFO - Todas as cartas listadas
 2024-12-12 14:15:26,904 - INFO - Carta 10 atualizada com sucesso
+2024-12-12 14:58:39,583 - INFO - Hash SHA256 do arquivo CSV calculado.
+2024-12-12 14:58:49,434 - INFO - Todas as cartas listadas
+2024-12-12 15:00:24,703 - INFO - Todas as cartas listadas
+2024-12-12 15:21:31,630 - INFO - Carta inserida com sucesso: id=90, nome=darlan, tipo=string, custo=0, cor=string, rarity=string, habilidade=string
+2024-12-12 15:21:33,706 - INFO - Carta inserida com sucesso: id=90, nome=darlan, tipo=string, custo=0, cor=string, rarity=string, habilidade=string
+2024-12-12 15:23:42,288 - INFO - Carta inserida com sucesso: id=90, nome=darlan, tipo=string, custo=0, cor=string, rarity=string, habilidade=string
+2024-12-12 15:24:24,873 - INFO - Carta inserida com sucesso: id=90, nome=darlan, tipo=string, custo=0, cor=string, rarity=string, habilidade=string
+2024-12-12 15:24:50,633 - INFO - Carta: 90 deletada com sucesso
+2024-12-12 15:24:52,862 - ERROR - Ao deletar carta: 90
