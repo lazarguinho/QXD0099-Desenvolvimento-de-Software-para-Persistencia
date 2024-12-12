@@ -63,3 +63,20 @@ def calcular_hash_csv() -> str:
         raise FileNotFoundError(f"O arquivo {CSV_FILE_PATH} não foi encontrado.")
 
     return sha256_hash.hexdigest()
+
+def ler_dados_csv():
+	cartas = []
+	if os.path.exists(CSV_FILE_PATH):
+		with open (CSV_FILE_PATH, mode='r', newline='') as file:
+			reader = csv.DictReader(file)
+			for row in reader:
+				cartas.append(Carta(**row))
+	return cartas
+
+def escrever_dados_csv(cartas):
+	with open(CSV_FILE_PATH, mode='w', newline='') as file:
+		fieldnames = ['id','nome','preco','quantidade']
+		writer = csv.DictWriter(file, fieldnames=fieldnames)
+		writer.writeheader()
+		for produto in cartas:
+			writer.writerow(produto.dict())

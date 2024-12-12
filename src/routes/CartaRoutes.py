@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from typing import Optional, List
 from src.models.Carta import Carta
-from src.services.CartaService import verificar_carta_existe, adicionar_carta, filtrar_cartas, calcular_hash_csv
+from src.services.CartaService import verificar_carta_existe, adicionar_carta, filtrar_cartas, calcular_hash_csv, ler_dados_csv
 from src.utils.logging_config import logger
 
 router = APIRouter()
@@ -32,4 +32,10 @@ def calcular_hash():
     except Exception as e:
         logger.error(f"Erro ao calcular o hash SHA256: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/all", response_model=List[Carta])
+def listar_todas_cartas():
+    return ler_dados_csv()
+
+
     
