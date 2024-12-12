@@ -19,3 +19,6 @@
 2024-12-12 15:24:24,873 - INFO - Carta inserida com sucesso: id=90, nome=darlan, tipo=string, custo=0, cor=string, rarity=string, habilidade=string
 2024-12-12 15:24:50,633 - INFO - Carta: 90 deletada com sucesso
 2024-12-12 15:24:52,862 - ERROR - Ao deletar carta: 90
+2024-12-12 18:33:28,144 - INFO - Arquivo zip disponibilizado com sucesso
+2024-12-12 18:34:34,462 - INFO - Carta inserida com sucesso: id=11, nome=string, tipo=string, custo=0, cor=string, rarity=string, habilidade=string
+2024-12-12 18:34:50,939 - INFO - Arquivo zip disponibilizado com sucesso

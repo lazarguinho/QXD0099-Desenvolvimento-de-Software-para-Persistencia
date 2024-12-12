@@ -1,8 +1,11 @@
 from fastapi import APIRouter, HTTPException
+from fastapi.responses import FileResponse
 from typing import Optional, List
 from src.models.Carta import Carta
-from src.services.CartaService import verificar_carta_existe, adicionar_carta, filtrar_cartas, calcular_hash_csv, ler_dados_csv, escrever_dados_csv
+from src.services.CartaService import verificar_carta_existe, adicionar_carta, filtrar_cartas, calcular_hash_csv, ler_dados_csv, escrever_dados_csv, CSV_FILE_PATH
 from src.utils.logging_config import logger
+import zipfile
+import os
 
 router = APIRouter()
 
@@ -75,4 +78,16 @@ def deletar_carta(carta_id: int):
 @router.get("/total/")
 def quantidae_de_entidades():
 	cartas = ler_dados_csv()
+	logger.info(f"Numero de entidades fornecido com sucesso")
 	return {"quantidade": len(cartas)}
+
+@router.get("/download/", response_class=FileResponse)
+def download_dados_zip():
+	caminho_ZIP = "data/arquivo.zip"
+
+	with zipfile.ZipFile(caminho_ZIP, 'w') as zipf:
+		zipf.write(CSV_FILE_PATH)
+
+	response = FileResponse(caminho_ZIP, media_type="application/zip", filename="dados.zip")
+	logger.info(f"Arquivo zip disponibilizado com sucesso")
+	return response
