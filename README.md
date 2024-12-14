@@ -2,6 +2,8 @@
 
 Bem-vindo ao repositório de projetos práticos da disciplina **QXD0099**, oferecida pela Universidade Federal do Ceará, Campus Quixadá, e ministrada pelo Prof. Francisco Victor da Silva Pinheiro. Aqui você encontra informações sobre instalação, execução e descrição do projeto principal.
 
+**Relatório no diretório /docs/Relatório Persistência.pdf**
+
 ## Sumário
 
 - [Instalação](#instalação)
